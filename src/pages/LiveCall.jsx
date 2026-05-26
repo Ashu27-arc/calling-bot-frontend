@@ -18,7 +18,7 @@ const LiveCall = () => {
 
   useEffect(() => {
     // Connect to Backend (Use env variable for production, fallback to localhost for dev)
-    const backendUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    const backendUrl = import.meta.env.VITE_API_URL || 'https://calling-bot-backend.onrender.com';
     socketRef.current = io(backendUrl);
     
     socketRef.current.on('connect', () => {
